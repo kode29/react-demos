@@ -2,21 +2,32 @@
 // camelCase
 // snake_case
 
-function TemporaryName(){
+function Page(){
     return (
     <div>
-        <img src="./logo512.png" alt="React Logo" width="40"/>
-        <h1>Fun facts about React</h1>
-        <ul>
-            <li>Was first releasted in 2013</li>
-            <li>Was originally created by Jordan Walke</li>
-            <li>Has over 100k stars on <a href="https://github.com/facebook/react">Github</a></li>
-            <li>Is maintained by <a href="https://facebook.com">Facebook</a></li>
-            <li>Powers thousands of enterprise apps, including Mobile apps</li>
-        </ul>
+        <header>
+            <nav>
+                <img src="./logo512.png" width="40"/>
+            </nav>
+        </header>
+        <main>
+            <h1>Why React is Fun</h1>
+            <ol>
+                <li>It's a popular library, so I can fit in with the cool kids</li>
+                <li>I'm more likely to get a job as a developer if I know React</li>
+                <li>Reason #3</li>
+                <li>Reason #4</li>
+            </ol>
+        </main>
+        <footer>
+            <small>&copy; 2024 - <a href="https://educodewithkp.com">EduCode with KP</a> | All rights reserved</small>
+        </footer>
     </div>
     )
 }
 
+// call by function - technically not correct, but works
+// ReactDOM.render(Page(), document.getElementById("root"))
 
-ReactDOM.render(TemporaryName(), document.getElementById("root"))
+/// correct "component" calling
+ReactDOM.render(<Page />, document.getElementById("root"))
