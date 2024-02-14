@@ -1,7 +1,13 @@
-function Navbar() {
+export default function Navbar() {
     return (
-     <h1>Navbar goes here</h1>
+     <nav className="navbar">
+        <div>
+          <img src="/assets/img/logo192.png" alt="React Logo"/>
+          <h3>React Facts</h3>
+        </div>
+        <div>
+          <h4>React Course - Project 1</h4>
+        </div>
+     </nav>
     );
   }
-  
-  export default Navbar;

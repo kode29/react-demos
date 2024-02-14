@@ -5,16 +5,16 @@ import Main from "./components/Main";
 
 import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <div>
+    <div className="container">
       <Navbar />
       <Main />
     </div>    
   );
 }
 
-export default App;
+// export default App;
 
 //ReactDOM.render(<Page />, createdocument.getElementById("root"))
 const container = document.getElementById("root")
