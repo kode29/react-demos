@@ -1,0 +1,30 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    background: #ccc;
+}
+body{
+    width: 80%;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo{
+    /* Not necessary to have a class for everything - just practice */
+    width: 60px;
+}
+.nav-items{
+    list-style: none;  
+    display: flex;  
+}
+.nav-items > li{
+    padding: 10px;
+}

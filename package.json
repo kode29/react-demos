@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.9"
+  },
+  "dependencies": {
+    "@babel/standalone": "^7.23.10",
+    "babel-browser": "^6.1.19"
+  }
+}
