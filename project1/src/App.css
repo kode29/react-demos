@@ -47,6 +47,7 @@ nav{
 main {
   padding: 57px 27px;
   color: white;
+  background: url("/public/assets/img/reactjs-icon 2.png") 100% 65% no-repeat;
 }
 .main--title {
   margin: 0;
@@ -59,4 +60,13 @@ main {
 .main--facts > li {
   line-height: 19px;
   padding-block: 10px; /* New CSS Property */
+}
+.main--facts > li::marker{
+  /* New CSS Property for list-items bullets */
+  font-size: 1.4rem;
+  color: #61dafb;
+}
+main a {
+  color: #7099fa;
+  font-weight: bold;
 }
