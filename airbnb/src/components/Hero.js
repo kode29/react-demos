@@ -1,7 +1,9 @@
 export default function Hero(){
     return (
         <div className="hero">
-            Hero
+            <div className="hero--content">
+                Images
+            </div>
         </div>
     )
 }
