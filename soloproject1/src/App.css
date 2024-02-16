@@ -1,3 +1,7 @@
+:root{
+    --radius: 15px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 *{
     box-sizing: border-box;
@@ -12,14 +16,14 @@ body{
 .container {
     margin-top: 2em;
     width: 350px;
-    background: #fff;
-    border-radius: 15px;
+    background: #F5F5F5;
+    border-radius: var(--radius);
     box-shadow: 0px 5px 5px 5px #222;
 }
 .info--headshot{
     background: url("https://kylemperkins.com/assets/images/kmp-headshot.jpg") no-repeat;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: var(--radius);;
+    border-top-right-radius: var(--radius);;
     height: 250px;
     width: 100%;
     background-size: cover;
@@ -32,11 +36,68 @@ header {
 }
 .info--header > *{
     margin: 0;
-    line-height: 1.45em;
+    line-height: 1.55em;
 }
 .info--title{
     color: #F47D27;
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: .1em;
+    letter-spacing: .05em;
+}
+.info--buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.info--buttons button {
+    width: 125px;
+    border: 1px #ccc solid;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.info--buttons a:hover button {
+    box-shadow: 0 0 5px #ccc;
+}
+.info--button_linkedin{
+    background-color:#297FE5 !important;
+    color: #fff;
+}
+.about, .interests, .info--buttons{
+    padding-left: 30px;
+    padding-right: 30px;    
+}
+.about p, .interests p{
+    font-size: 12px;
+    text-align: justify;
+    margin: 0 auto 10px auto;
+    line-height: 1.5em;
+}
+.about h3, .interests h3{
+    margin-bottom: 5px;
+}
+footer {
+    margin-top: 20px;
+    height: 50px;
+    background-color: #D5D4D8;
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+}
+.footer--wrapper{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.footer--wrapper a {
+    background-color: #918E9B;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+    display: inline-block;
+    border-radius: 3px;
+    color: #D5D4D8;
 }

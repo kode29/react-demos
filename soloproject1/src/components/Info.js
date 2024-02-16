@@ -12,9 +12,9 @@ export default function Info(){
                 <h4 className="info--title">Full Stack Developer</h4>
                 <h5 className="info--website"><a href="http://kylemperkins.com" target="_blank" rel="noreferrer">KyleMPerkins.com</a></h5>
            </div>
-           <div className="info--buttons">
-                <button className="info--button_email"><FontAwesomeIcon icon={faEnvelope} /> Email</button>
-                <button className="info--button_linkedin"><FontAwesomeIcon icon={faLinkedin} />  LinkedIn</button>
+           <div className="info--buttons spacer">
+                <a href="mailto:kyle@kylemperkins.com"><button className="info--button_email"><FontAwesomeIcon icon={faEnvelope} /> Email</button></a>
+                <a href="https://linkedin.com/in/kylemperkins"><button className="info--button_linkedin"><FontAwesomeIcon icon={faLinkedin} />  LinkedIn</button></a>
            </div>
         </header>
     )

@@ -6,10 +6,12 @@ import { faTwitter, faFacebook, faInstagram, faGithub } from '@fortawesome/free-
 export default function Footer(){
     return (
         <footer>
-            <FontAwesomeIcon icon={faTwitter} />
-            <FontAwesomeIcon icon={faFacebook} />
-            <FontAwesomeIcon icon={faInstagram} />
-            <FontAwesomeIcon icon={faGithub} />
+            <div className="footer--wrapper">
+                <a href="https://twitter.com/kylemperkins"><FontAwesomeIcon icon={faTwitter} /></a>
+                <a href="https://facebook.com/kode29"><FontAwesomeIcon icon={faFacebook} /></a>
+                <a href="https://instagram.com/code_with_cats"><FontAwesomeIcon icon={faInstagram} /></a>
+                <a href="https://github.com/kode29"><FontAwesomeIcon icon={faGithub} /></a>
+            </div>
         </footer>
     )
 }
