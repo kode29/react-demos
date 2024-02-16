@@ -18,7 +18,7 @@ export default function App() {
   );
 }
 
-//ReactDOM.render(<Page />, createdocument.getElementById("root"))
+//ReactDOM.render(<App />, createdocument.getElementById("root"))
 const container = document.getElementById("root")
 const root = createRoot(container)
 root.render(<App />)
