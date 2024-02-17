@@ -84,6 +84,9 @@ section {
 .card--item_content_star{
   height: 14px;
 }
+.card--item_content_title{
+  min-height: 40px;
+}
 .card--item_content_price span{
   font-weight: bold;
 }
