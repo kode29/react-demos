@@ -9,7 +9,7 @@ export default [
             rating: 5.0,
             reviewCount: 6
         },
-        location: "Online",
+        location: "USA",
         openSpots: 0
     },
     {
@@ -23,7 +23,7 @@ export default [
             reviewCount: 30
         },
         location: "Online",
-        openSpots: 0
+        openSpots: 10
     },
     {
         id: 3,
@@ -35,7 +35,33 @@ export default [
             rating: 4.8,
             reviewCount: 2
         },
-        // location: "Online",
-        // openSpots: 0
+        location: "Norway",
+        openSpots: 5
+    },
+    {
+        id: 4,
+        title: "Group Mountain Biking",
+        description: "Some description",
+        price: 50,
+        coverImg: "mountain-bike.png",
+        stats: {
+            rating: 4.8,
+            reviewCount: 2
+        },
+        location: "Norway",
+        openSpots: 5
+    },
+    {
+        id: 5,
+        title: "Group Mountain Biking",
+        description: "Some description",
+        price: 50,
+        coverImg: "mountain-bike.png",
+        stats: {
+            rating: 4.8,
+            reviewCount: 2
+        },
+        location: "Norway",
+        openSpots: 5
     },
 ]

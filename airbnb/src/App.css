@@ -51,13 +51,31 @@ section {
   margin-top: 0;
   font-size: 125%;
 }
+.cardGrid{
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+
+}
 .card {
   width: 175px;
   font-size: 12px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.card div {
+  margin: 5px auto;
+}
+.card--item{
+  position: relative;
 }
 .card--item_img{
   width: 100%;
   border-radius: 9px;
+  margin-bottom: 9px;
 }
 .card--item_content_rating{
   display: flex;
@@ -67,5 +85,14 @@ section {
   height: 14px;
 }
 .card--item_content_price span{
+  font-weight: bold;
+}
+.card--item_badge{
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 3px 7px;
+  border-radius: 2px;
   font-weight: bold;
 }
