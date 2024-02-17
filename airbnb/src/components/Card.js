@@ -10,7 +10,7 @@ export default function Card(props){
                         <span>{props.rating}</span>
                         <span className="gray">({props.reviewCount})</span>
                         &middot;
-                        <span className="gray">{props.country}</span>
+                        <span className="gray">{props.location}</span>
                     </div>
                     <div className="card--item_content_title">
                         {props.title}
