@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client"
 
 import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
+// import Hero from "./components/Hero"
 import Card from "./components/Card"
 
 import data from "./data"
@@ -24,7 +24,7 @@ export default function App() {
   return (
     <div className="container">
       <Navbar />
-      <Hero />
+      {/* <Hero /> */}
       <section className="cardGrid">
         {cards}
       </section>
