@@ -15,6 +15,9 @@ body{
   background: white;
   box-shadow: 0 0 5px #000;
 }
+.gray{
+  color: #918e9b;
+}
 
 nav, .hero--content, .grid {
   padding: 20px 36px;
@@ -47,4 +50,22 @@ section {
 .hero--p{
   margin-top: 0;
   font-size: 125%;
+}
+.card {
+  width: 175px;
+  font-size: 12px;
+}
+.card--item_img{
+  width: 100%;
+  border-radius: 9px;
+}
+.card--item_content_rating{
+  display: flex;
+  align-items: center;
+}
+.card--item_content_star{
+  height: 14px;
+}
+.card--item_content_price span{
+  font-weight: bold;
 }
