@@ -18,7 +18,7 @@ body{
 .navbar{
   color: white;
   text-align: center;
-  background-color: #F55A5A;
+  background-color: rgba(240,0,0,.8);
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
   height: 50px;
@@ -27,4 +27,54 @@ body{
 .navbar img {
   margin-bottom: -7px;
   margin-right: 10px;
+}
+.cardGrid{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+.card{
+  padding: 20px 0;
+  border-bottom: 1px #ccc solid;
+  display: flex;
+  justify-content: space-between;
+}
+.card::last-of-type{
+  border-bottom: 0;
+}
+.card--img{
+  max-height: 200px;
+  max-width: 266px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px  #2f2f2f;
+}
+.card--info{
+  flex: auto;
+  padding: 20px;
+}
+.card--info_header span{
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 90%;
+}
+.card--info_map_pin{
+  margin-right: 10px;
+}
+.card--info_map_link {
+  margin-left: 20px;
+  color: #999;
+}
+.card--info_title{
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.card--info_dates{
+  font-weight: bold;
+}
+.card--info_description{
+  font-size: 9pt;
+  padding-top: 10px;
+  text-align: justify;
 }
