@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client"
 
-import Navbar from "./components/Navbar"
+import Header from "./components/Header"
 import Form from "./components/Form"
 import Output from "./components/Output"
 
@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <div className="container">
-      <Navbar />
+      <Header />
       <Form />
       <Output />
     </div>
