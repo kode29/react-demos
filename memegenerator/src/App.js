@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client"
 
 import Header from "./components/Header"
-import Form from "./components/Form"
+import Meme from "./components/Meme"
 import Output from "./components/Output"
 
 import './App.css';
@@ -11,7 +11,7 @@ export default function App() {
   return (
     <div className="container">
       <Header />
-      <Form />
+      <Meme />
       <Output />
     </div>
   );

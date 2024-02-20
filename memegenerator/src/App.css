@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+:root{
+  --purple: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);;
+}
+
 *{
   margin: 0;
   box-sizing: border-box;
@@ -13,6 +17,10 @@ body{
   background-color: #cfcfcf;
 }
 
+main{
+  padding: 36px;
+}
+
 .container{
   background-color: #fff;
   width: 800px;
@@ -24,7 +32,7 @@ body{
   display: flex;
   align-items: center;
   height: 65px;
-  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  background: var(--purple);
   color: white;
   padding: 20px;
 }
@@ -44,4 +52,26 @@ body{
 .header--project{
   font-size: .75rem;
   font-weight: bold;
+}
+form{
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  /* grid-rows: X; */
+  gap: 17px;
+}
+.form--input{
+  font-family: Karla, sans-serif;
+  border-radius: 5px;
+  border: 1px solid #d5d4d8;
+  text-indent: 5px;
+}
+
+.form--button{
+  grid-column: 1/ -1;
+  /* grid-column: 1 (beginning) / -1 (end) */
+  border-radius: 5px;
+  background: var(--purple);
+  color: white;
+  border: 0;
+  cursor: pointer;
 }
