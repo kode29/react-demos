@@ -75,3 +75,11 @@ form{
   border: 0;
   cursor: pointer;
 }
+.meme--image{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.meme--image img{
+  max-width: 100%;
+}
