@@ -18,3 +18,4 @@ _Credit: [FreeCodeCamp.org](http://freecodecamp.org) and [Learn React via Scrimb
 - [Bubble Add - React Practice](https://kode29-react-bubbleadd.netlify.app/)
 - [Boxes Challenge - React Practice](https://kode29-react-boxes.netlify.app/)
 - [Joke Challenge - React Practice](https://kode29-react-jokes.netlify.app/)
+- [Forms Challenge - React Practice](https://kode29-react-forms.netlify.app/)
