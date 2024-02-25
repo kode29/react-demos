@@ -3,19 +3,25 @@ import boxes from "./boxes"
 
 import css from "./App.css"
 
-export default function App(props) {
+export default function App() {
 
-  console.log(`Dark Mode: ${props.darkMode}`)
-  
+  const [darkMode, setDarkMode] = React.useState("false")
+  console.log(`Dark Mode: ${darkMode}`)
+
   const [boxesArray, setBoxesArray] = React.useState(boxes)
 
   const styles = {
-    backgroundColor: props.darkMode ? "#222222" : "#cccccc"
+    backgroundColor: darkMode ? "#222222" : "#cccccc"
   }
 
   const boxesElements = boxesArray.map(box => (
     <div style={styles} className="box" key={box.id}>{box.id}</div>
   ))
+
+  function toggleDarkMode(){
+    console.log("Toggle Dark Mode")
+    setDarkMode(darkState => !darkState) 
+  }
 
     /**
      * Challenge part 1:
@@ -30,7 +36,9 @@ export default function App(props) {
             {/* <h1>Boxes will go here</h1> */}
             <div className="boxGrid">
               {boxesElements}
+              <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
             </div>
+            
         </main>
     )
 }
