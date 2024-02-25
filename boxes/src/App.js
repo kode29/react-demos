@@ -16,20 +16,23 @@ export default function App() {
     console.log(`Toggle Background of ${id}`)
 
     setBoxesArray(prevBoxes => {
-      const newBoxes = [];
-      for (let i=0; i<prevBoxes.length; i++){
-        const currentBox = prevBoxes[i]
-        if (currentBox.id == id){
-          const updatedBox = {
-            ...currentBox,
-            on: !currentBox.on
-          }
-          newBoxes.push(updatedBox)
-        } else {
-          newBoxes.push(currentBox)
-        }
-      }
-      return newBoxes;
+      // const newBoxes = [];
+      // for (let i=0; i<prevBoxes.length; i++){
+      //   const currentBox = prevBoxes[i]
+      //   if (currentBox.id == id){
+      //     const updatedBox = {
+      //       ...currentBox,
+      //       on: !currentBox.on
+      //     }
+      //     newBoxes.push(updatedBox)
+      //   } else {
+      //     newBoxes.push(currentBox)
+      //   }
+      // }
+      // return newBoxes;
+      return prevBoxes.map((square)=>{
+        return square.id === id ? {...square, on: !square.on} : square
+      })
     })
 }
 
@@ -38,8 +41,8 @@ const boxesElements = boxesArray.map(box => (
     <Box 
       on={box.on} 
       key={box.id} 
-      id={box.id} 
-      handleClick={toggleBackground}
+      content={box.id}
+      handleClick={()=>toggleBackground(box.id)}
     />
   ))
   

@@ -1,5 +1,11 @@
 import React from "react"
 
+function randomBackground(){
+    const colors = ["red", "green", "blue", "yellow", "orange"]
+    const randomNumber = Math.floor(Math.random() * colors.length)
+    return colors[randomNumber]
+}
+
 export default function Box(props){
     /**
      * Challenge: Create state controlling whether
@@ -13,6 +19,9 @@ export default function Box(props){
      */
 
     const styles = {
+        // This is a good example of seeing the re-rendering of how React works
+        // Enable this line and see the (active) boxes change colors!
+        // backgroundColor: props.on ? randomBackground() : "transparent"
         backgroundColor: props.on ? "#222222" : "transparent"
     }
       
@@ -21,8 +30,8 @@ export default function Box(props){
         <div 
             style={styles} 
             className="box" 
-            key={props.id} 
-            onClick={()=>props.handleClick(props.id)}
-        >{props.id}</div>
+            key={props.content} 
+            onClick={props.handleClick}
+        >{props.content}</div>
     )
 }
