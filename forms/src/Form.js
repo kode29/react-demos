@@ -26,20 +26,20 @@ export default function Form() {
 
     async function handleSubmit(event){
         event.preventDefault()
+        console.log(event.target)
         console.log(formData)
 
-        // to send to an external API, like PHP
-                
-            try {
-              const response = await fetch("http://direct.kylemperkins.com/sandbox/post-json", {
+        console.log('Submitting form')
+        try {
+            const response = await fetch("https://kylemperkins.com/sandbox/post-json", {
                 method: "POST",
-                // Set the FormData instance as the request body
-                body: formData,
-              });
-              console.log(await response.json());
-            } catch (e) {
-              console.error(e);
-            }
+                body: new FormData(document.querySelector('form'))
+            });
+            console.log(await response.json())
+        } catch (e) {
+            console.error(e);
+        }
+
     }
 
     return (
