@@ -4,7 +4,8 @@ export default function Form() {
     const [formData, setFormData] = React.useState({
         firstName: "",
         lastName: "",
-        email: "" 
+        email: "",
+        comments: "" 
     })
 
     console.log(formData)
@@ -35,11 +36,19 @@ export default function Form() {
                 name="lastName"
                 value={formData.lastName}
             />
-            <input type="email"
+            <input
+                type="email"
                 placeholder="Email"
                 onChange={handleChange}
                 name="email"
                 value={formData.email}
+            />
+            { /* Yes, textarea IS self-closing! */}
+            <textarea
+                placeholder="Comments"
+                onChange={handleChange}
+                name="comments" 
+                value={formData.comments}
             />
         </form>
     )
