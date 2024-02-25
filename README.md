@@ -16,3 +16,4 @@ _Credit: [FreeCodeCamp.org](http://freecodecamp.org) and [Learn React via Scrimb
 - [addItem React Practice](https://kode29-react-additem.netlify.app/)
 - [favCard React Practice](https://kode29-react-favcard.netlify.app/)
 - [Bubble Add - React Practice](https://kode29-react-bubbleadd.netlify.app/)
+- [Boxes Challenge - React Practice]()
