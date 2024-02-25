@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #70B85D;
+  color: white;
+  padding: 20px;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.3rem;
+}
+
+button {
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  color: black;
+  border: 2px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #FFFEF1;
+  color: #2C5E2E;
+}
+
+button:focus {
+  outline: 0;
+}
