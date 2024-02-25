@@ -1,5 +1,7 @@
 import React from "react"
 
+import Star from "./components/Star"
+
 export default function App() {
     const [contact, setContact] = React.useState({
         firstName: "John",
@@ -9,7 +11,6 @@ export default function App() {
         isFavorite: false
     })
 
-    let starIcon = contact.isFavorite ? "star-filled.png" : "star-empty.png";
     
     function toggleFavorite() {
         setContact(prevContact => {
@@ -17,18 +18,7 @@ export default function App() {
             ...prevContact,
             isFavorite: !prevContact.isFavorite
           }
-          // ...prevContact imports ALL previous information
-          // isFavorite decoration OVERWRITES the data in the object
         })
-        // Also accepted:
-        /*
-        to return an object instead of `return`
-        
-        setContact(prevContact => ({
-          ...prevContact,
-          isFavorite: !prevContact.isFavorite
-        }))
-        */
     }
     
     return (
@@ -36,11 +26,7 @@ export default function App() {
             <article className="card">
                 <img src="./images/user.png" className="card--image" />
                 <div className="card--info">
-                    <img 
-                        src={`./images/${starIcon}`} 
-                        className="card--favorite"
-                        onClick={toggleFavorite}
-                    />
+                    <Star isFilled={contact.isFavorite} handleClick={toggleFavorite}/>
                     <h2 className="card--name">
                         {contact.firstName} {contact.lastName}
                     </h2>

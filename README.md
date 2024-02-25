@@ -13,4 +13,4 @@ From [React Course - Beginners Tutorial for React Javascript Library [2022]](htt
 - [AirBnb Clone](https://kode29-react-airbnb.netlify.app/)
 - [addItem React Practice](https://kode29-react-additem.netlify.app/)
 - [favCard React Practice](https://kode29-react-favcard.netlify.app/)
-- [Bubble Add - React Practice]()
+- [Bubble Add - React Practice](https://kode29-react-bubbleadd.netlify.app/)
