@@ -13,7 +13,7 @@ export default function App() {
 
   const boxesElements = boxesArray.map(box => (
     // <div style={styles} className="box" key={box.id}>{box.id}</div>
-    <Box on={box.on} id={box.id}/>
+    <Box on={box.on} key={box.id} id={box.id}/>
   ))
 
   // function toggleDarkMode(){
