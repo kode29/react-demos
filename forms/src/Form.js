@@ -5,17 +5,19 @@ export default function Form() {
         firstName: "",
         lastName: "",
         email: "",
-        comments: "" 
+        comments: "",
+        isFriendly: true 
     })
 
     console.log(formData)
 
     function handleChange(event){
         // console.log(event.target.name)
+        const {name, value, type, checked} = event.target
         setFormData(prevData => {
             return {
                 ...prevData,
-                [event.target.name]: event.target.value
+                [name]: type === "checkbox" ? checked : value
             }
         });
     }
@@ -50,6 +52,14 @@ export default function Form() {
                 name="comments" 
                 value={formData.comments}
             />
+            <input
+                type="checkbox"
+                id="isFriendly"
+                name="isFriendly"
+                onChange={handleChange}
+                checked={formData.isFriendly}
+            />
+            <label htmlFor="isFriendly">Are you friendly?</label>
         </form>
     )
 }
