@@ -11,7 +11,7 @@ export default function Form() {
         favColor: ""
     })
 
-    console.log(formData)
+    // console.log(formData)
 
     function handleChange(event){
         // console.log(event.target.name)
@@ -24,8 +24,26 @@ export default function Form() {
         });
     }
 
+    async function handleSubmit(event){
+        event.preventDefault()
+        console.log(formData)
+
+        // to send to an external API, like PHP
+                
+            try {
+              const response = await fetch("http://direct.kylemperkins.com/sandbox/post-json", {
+                method: "POST",
+                // Set the FormData instance as the request body
+                body: formData,
+              });
+              console.log(await response.json());
+            } catch (e) {
+              console.error(e);
+            }
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="First Name"
@@ -119,6 +137,9 @@ export default function Form() {
                 <option value="indigo">Indigo</option>
                 <option value="violet">Violet</option>
             </select>
+            {/* <input type="submit" value="Send"/> 
+            HTML5 allows for buttons inside forms to submit by default*/}
+            <button>Send</button>
         </form>
     )
 }
