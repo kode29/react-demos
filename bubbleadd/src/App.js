@@ -14,6 +14,8 @@ export default function App() {
     function subtract() {
         setCount(prevCount => prevCount - 1)
     }
+
+    console.log("App component rendered")
     
     /**
      * Challenge:
