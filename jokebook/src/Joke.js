@@ -11,14 +11,21 @@ export default function Joke(props) {
 
     const [isShown, setIsShown] = React.useState(false)
 
-    function toggle(){
-        
+    function toggleShown(id){
+        setIsShown(prevState => !prevState)
+            // {
+            // return prevState.map((show)=>{
+            //     return show.id === id ? {...show}
+            // })
+            // return prevState = 
+        // })
     }
 
     return (
         <div>
             {props.setup && <h3>{props.setup}</h3>}
-            <p>{props.punchline}</p>
+            {isShown && <p>{props.punchline}</p>}
+            <button onClick={toggleShown}>Show Punchline</button>
             <hr />
         </div>
     )
