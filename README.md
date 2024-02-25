@@ -9,3 +9,4 @@ From [React Course - Beginners Tutorial for React Javascript Library [2022]](htt
 - [Solo Project 1: Static Business Card](https://kode29-react-project1.netlify.app/)
 - [AirBnb Clone](https://kode29-react-airbnb.netlify.app/)
 - [Solo Project 2: Travel Blog](https://kode29-react-traveljournal.netlify.app/)
+- [addItem React Practice](https://kode29-react-additem.netlify.app/)
