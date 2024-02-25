@@ -1,4 +1,4 @@
-import { createRoot } from "react-dom/client"
+import React from "react"
 
 import Header from "./components/Header"
 import Meme from "./components/Meme"
@@ -18,7 +18,7 @@ export default function App() {
 }
 
 
-//ReactDOM.render(<App />, createdocument.getElementById("root"))
-const container = document.getElementById("root")
-const root = createRoot(container)
-root.render(<App />)
+// //ReactDOM.render(<App />, createdocument.getElementById("root"))
+// const container = document.getElementById("root")
+// const root = createRoot(container)
+// root.render(<App />)

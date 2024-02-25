@@ -79,7 +79,9 @@ form{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 20px;
 }
 .meme--image img{
   max-width: 100%;
+  border-radius: 5px;
 }
