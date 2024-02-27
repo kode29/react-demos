@@ -25,7 +25,7 @@ export default function Meme(){
     }
 
     function handleChange(e){
-        const {name, value, type, checked} = e.target
+        const {name, value} = e.target
         setMeme(prevData => ({    
             ...prevData,
             [name]: value
