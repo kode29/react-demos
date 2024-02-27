@@ -11,8 +11,11 @@ _Credit: [FreeCodeCamp.org](http://freecodecamp.org) and [Learn React via Scrimb
 - [Solo Project 1: Static Business Card](https://kode29-react-project1.netlify.app/)
 - [Solo Project 2: Travel Blog](https://kode29-react-traveljournal.netlify.app/)
 
-## Practice Modules
+## In-Course Project
 - [AirBnb Clone](https://kode29-react-airbnb.netlify.app/)
+- [Meme Generator](https://kode29-react-meme.netlify.app/)
+
+## Practice Modules
 - [addItem React Practice](https://kode29-react-additem.netlify.app/)
 - [favCard React Practice](https://kode29-react-favcard.netlify.app/)
 - [Bubble Add - React Practice](https://kode29-react-bubbleadd.netlify.app/)
@@ -20,3 +23,4 @@ _Credit: [FreeCodeCamp.org](http://freecodecamp.org) and [Learn React via Scrimb
 - [Joke Challenge - React Practice](https://kode29-react-jokes.netlify.app/)
 - [Forms Challenge - React Practice](https://kode29-react-forms.netlify.app/)
 - [Forms Practice - React Practice](https://kode29-react-forms-practice1.netlify.app/)
+- [API Call Practice 1](htps://kode29-react-api1.netlify.app)
