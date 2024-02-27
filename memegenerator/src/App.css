@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 :root{
   --purple: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);;
 }
@@ -75,13 +76,45 @@ form{
   border: 0;
   cursor: pointer;
 }
-.meme--image{
+.meme {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-top: 20px;
+  position: relative;
+  
 }
-.meme--image img{
+.meme img{
   max-width: 100%;
   border-radius: 5px;
+}
+.meme--text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: Anton, impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 3px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+.bottom {
+  bottom: 0;
+}
+.top{
+  top: 0;
 }
