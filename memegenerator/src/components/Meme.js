@@ -11,21 +11,24 @@ export default function Meme(){
     })
 
     const [allMemes, setAllMemes] = React.useState([])
-    React.useEffect( () => {
-        console.log("Effect Ran");
-        fetch("https://api.imgflip.com/get_memes")
-            .then(res => res.json())
-            .then(apiData => setAllMemes(apiData.data.memes))
-    }, [])
+    // React.useEffect( () => {
+    //     console.log("Effect Ran");
+    //     fetch("https://api.imgflip.com/get_memes")
+    //         .then(res => res.json())
+    //         .then(apiData => setAllMemes(apiData.data.memes))
+    // }, [])
     // dependency is [] as it only needs to run on load and not again
 
     // ASYNC version
-    // React.useEffect( async () => {
-    //     console.log("Effect Ran");
-    //     const res = await fetch("https://api.imgflip.com/get_memes")
-    //     const apiData = await res.json()
-    //     setAllMemes(apiData.data.memes)
-    // }, [])
+    React.useEffect( () => {
+        async function getMemes(){
+            console.log("Effect Ran");
+            const res = await fetch("https://api.imgflip.com/get_memes")
+            const apiData = await res.json()
+            setAllMemes(apiData.data.memes)
+        }
+        getMemes();
+    }, [])
 
     function getMemeImage(e){
         e.preventDefault();
