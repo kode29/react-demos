@@ -10,20 +10,29 @@ export default function Meme(){
         randomImage: "http://i.imgflip.com/1bij.jpg"
     })
 
-    const [allMemes, setallMemes] = React.useState({})
+    const [allMemes, setAllMemes] = React.useState([])
     React.useEffect( () => {
         console.log("Effect Ran");
         fetch("https://api.imgflip.com/get_memes")
-        .then(res => res.json())
-        .then(data => setallMemes(data))
+            .then(res => res.json())
+            .then(apiData => setAllMemes(apiData.data.memes))
     }, [])
+    // dependency is [] as it only needs to run on load and not again
+
+    // ASYNC version
+    // React.useEffect( async () => {
+    //     console.log("Effect Ran");
+    //     const res = await fetch("https://api.imgflip.com/get_memes")
+    //     const apiData = await res.json()
+    //     setAllMemes(apiData.data.memes)
+    // }, [])
 
     function getMemeImage(e){
         e.preventDefault();
 
-        const memesArray = allMemes.data.memes;
-        const randomNumber = Math.floor(Math.random() * memesArray.length);
-        const url = memesArray[randomNumber].url;
+        // const memesArray = allMemes;
+        const randomNumber = Math.floor(Math.random() * allMemes.length);
+        const url = allMemes[randomNumber].url;
         setMeme(prevMeme => ({
             ...prevMeme, 
             randomImage: url
