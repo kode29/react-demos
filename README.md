@@ -23,4 +23,4 @@ _Credit: [FreeCodeCamp.org](http://freecodecamp.org) and [Learn React via Scrimb
 - [Joke Challenge - React Practice](https://kode29-react-jokes.netlify.app/)
 - [Forms Challenge - React Practice](https://kode29-react-forms.netlify.app/)
 - [Forms Practice - React Practice](https://kode29-react-forms-practice1.netlify.app/)
-- [API Call Practice 1](htps://kode29-react-api1.netlify.app)
+- [API Call Practice 1](https://kode29-react-api1.netlify.app)
