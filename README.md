@@ -11,21 +11,22 @@ everything else is built using local `npm` server (with `create-react-app NAME`)
 # Publically Available Demos
 
 >## Capstone Projects
-- [Solo Project 1: Static Business Card](https://kode29-react-bizcard.netlify.app/)
-- [Solo Project 2: Travel Blog](https://kode29-react-traveljournal.netlify.app/)
+- [Solo Project 1: Static Business Card](https://kode29-react-bizcard.surge.sh/)
+- [Solo Project 2: Travel Blog](https://kode29-react-traveljournal.surge.sh/)
 
->## In-Course Project
-- [AirBnb Clone](https://kode29-react-airbnb.netlify.app/)
-- [Meme Generator](https://kode29-react-meme.netlify.app/)
+>## In-Course Projects
+- [AirBnb Clone](https://kode29-react-airbnb.surge.sh/)
+- [Meme Generator](https://kode29-react-meme.surge.sh/)
+- [Notes App](https://kode29-react-notes.surge.sh/)
 
 >## Practice Modules
 - [Fun Facts about React](https://kode29-react-project1.netlifty.app/)
-- [addItem React Practice](https://kode29-react-additem.netlify.app/)
-- [favCard React Practice](https://kode29-react-favcard.netlify.app/)
-- [Bubble Add - React Practice](https://kode29-react-bubbleadd.netlify.app/)
-- [Boxes Challenge - React Practice](https://kode29-react-boxes.netlify.app/)
-- [Joke Challenge - React Practice](https://kode29-react-jokes.netlify.app/)
-- [Forms Challenge - React Practice](https://kode29-react-forms.netlify.app/)
-- [Forms Practice - React Practice](https://kode29-react-forms-practice1.netlify.app/)
-- [API Call Practice 1](https://kode29-react-api1.netlify.app)
-- [Window API useEffect() practice](https://kode29-react-window.netlify.app)
+- [addItem React Practice](https://kode29-react-additem.surge.sh/)
+- [favCard React Practice](https://kode29-react-favcard.surge.sh/)
+- [Bubble Add - React Practice](https://kode29-react-bubbleadd.surge.sh/)
+- [Boxes Challenge - React Practice](https://kode29-react-boxes.surge.sh/)
+- [Joke Challenge - React Practice](https://kode29-react-jokes.surge.sh/)
+- [Forms Challenge - React Practice](https://kode29-react-forms.surge.sh/)
+- [Forms Practice - React Practice](https://kode29-react-forms-practice1.surge.sh/)
+- [API Call Practice 1](https://kode29-react-api1.surge.sh)
+- [Window API useEffect() practice](https://kode29-react-window.surge.sh)

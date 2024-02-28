@@ -27,10 +27,12 @@ export default function Form() {
     async function handleSubmit(event){
         event.preventDefault()
         console.log(event.target)
+        console.log("Local Form Data:")
         console.log(formData)
 
-        console.log('Submitting form')
+        console.log('Submitting form...')
         try {
+            console.log("Server POST Response:")
             const response = await fetch("https://kylemperkins.com/sandbox/post-json", {
                 method: "POST",
                 body: new FormData(document.querySelector('form'))
@@ -43,6 +45,7 @@ export default function Form() {
     }
 
     return (
+        <div>
         <form onSubmit={handleSubmit}>
             <input
                 type="text"
@@ -141,5 +144,7 @@ export default function Form() {
             HTML5 allows for buttons inside forms to submit by default*/}
             <button>Send</button>
         </form>
+        <small><i>Check the <code>Developer Toolbar &gt; Console</code> for output</i></small>
+        </div>
     )
 }
