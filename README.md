@@ -5,7 +5,8 @@ From [React Course - Beginners Tutorial for React Javascript Library [2022]](htt
 _Credit: [FreeCodeCamp.org](http://freecodecamp.org) and [Learn React via Scrimba](https://scrimba.com/learn/learnreact)_
 
 **Note:** react1-4 use local babel transpilers  
-everything else is built using local `npm` server (with `create-react-app my-app`)
+everything else is built using local `npm` server (with `create-react-app NAME`)
+(in fact, my favorite "new project" command is `npx create-react-app NAME && cd "$_" && npm start`)
 
 ## Projects Available
 - [Solo Project 1: Static Business Card](https://kode29-react-bizcard.netlify.app/)
