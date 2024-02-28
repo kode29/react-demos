@@ -5,10 +5,10 @@ From [React Course - Beginners Tutorial for React Javascript Library [2022]](htt
 _Credit: [FreeCodeCamp.org](http://freecodecamp.org) and [Learn React via Scrimba](https://scrimba.com/learn/learnreact)_
 
 **Note:** react1-4 use local babel transpilers  
-"my-app" is built using local `npm` server (with `create-react-app my-app`)
+everything else is built using local `npm` server (with `create-react-app my-app`)
 
 ## Projects Available
-- [Solo Project 1: Static Business Card](https://kode29-react-project1.netlify.app/)
+- [Solo Project 1: Static Business Card](https://kode29-react-bizcard.netlify.app/)
 - [Solo Project 2: Travel Blog](https://kode29-react-traveljournal.netlify.app/)
 
 ## In-Course Project
@@ -16,6 +16,7 @@ _Credit: [FreeCodeCamp.org](http://freecodecamp.org) and [Learn React via Scrimb
 - [Meme Generator](https://kode29-react-meme.netlify.app/)
 
 ## Practice Modules
+- [Fun Facts about React](https://kode29-react-project1.netlifty.app/)
 - [addItem React Practice](https://kode29-react-additem.netlify.app/)
 - [favCard React Practice](https://kode29-react-favcard.netlify.app/)
 - [Bubble Add - React Practice](https://kode29-react-bubbleadd.netlify.app/)
