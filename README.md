@@ -5,18 +5,20 @@ From [React Course - Beginners Tutorial for React Javascript Library [2022]](htt
 _Credit: [FreeCodeCamp.org](http://freecodecamp.org) and [Learn React via Scrimba](https://scrimba.com/learn/learnreact)_
 
 **Note:** react1-4 use local babel transpilers  
-everything else is built using local `npm` server (with `create-react-app NAME`)
+everything else is built using local `npm` server (with `create-react-app NAME`)  
 (in fact, my favorite "new project" command is `npx create-react-app NAME && cd "$_" && npm start`)
 
-## Projects Available
+# Publically Available Demos
+
+>## Capstone Projects
 - [Solo Project 1: Static Business Card](https://kode29-react-bizcard.netlify.app/)
 - [Solo Project 2: Travel Blog](https://kode29-react-traveljournal.netlify.app/)
 
-## In-Course Project
+>## In-Course Project
 - [AirBnb Clone](https://kode29-react-airbnb.netlify.app/)
 - [Meme Generator](https://kode29-react-meme.netlify.app/)
 
-## Practice Modules
+>## Practice Modules
 - [Fun Facts about React](https://kode29-react-project1.netlifty.app/)
 - [addItem React Practice](https://kode29-react-additem.netlify.app/)
 - [favCard React Practice](https://kode29-react-favcard.netlify.app/)
