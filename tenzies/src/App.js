@@ -3,25 +3,67 @@ import Header from "./components/Header"
 import DieBox from "./components/DieBox"
 import Roll from "./components/Roll"
 
+import { customAlphabet } from 'nanoid/non-secure'; 
+
 import './App.css';
 
+const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz0123456789', 10); 
+
+
 export default function App() {
+
+  const [dieFace, setDieFace] = React.useState(allNewDice())
+
+  function allNewDice(){
+    const newDice = [];
+    for (let i=0; i<10; i++){
+      let nextDice = { 
+        value: Math.ceil(Math.random() * 6), 
+        isHeld: false ,
+        id: nanoid()
+      }
+      newDice.push( nextDice )
+    }
+    // console.log(newDice)
+    return newDice;
+  }
+
+  function rollDice(){
+    // TODO: Tasks pending completion -@kyle at 3/1/2024, 3:35:20 AM
+    // only roll on isHeld:false
+    setDieFace(allNewDice())
+  }
+
+  function toggleHold(id){
+    console.log(id, " Clicked")
+    setDieFace(oldValue => {
+      return oldValue.map((die)=>{
+        return die.id === id ? {...die, isHeld: !die.isHeld} : die
+      })
+    })
+  }
+
+  // React.useEffect(() => {
+  //   setDieFace(allNewDice())
+  // }, dieFace)
+
+  const diceElements = dieFace.map((dice) => (
+    <DieBox 
+      key={dice.id} 
+      value={dice.value} 
+      isHeld={dice.isHeld}
+      handleClick={()=>toggleHold(dice.id)}
+    />
+    )
+  )
+
   return (
     <main>
       <Header />
       <div className="diceContainer">
-        <DieBox value="1"/>
-        <DieBox value="2"/>
-        <DieBox value="3"/>
-        <DieBox value="4"/>
-        <DieBox value="5"/>
-        <DieBox value="6"/>
-        <DieBox value="7"/>
-        <DieBox value="8"/>
-        <DieBox value="9"/>
-        <DieBox value="0"/>
+          { diceElements }
       </div>
-      <Roll />
+      <Roll text="Roll" handleClick={rollDice}/>
     </main>
   );
 }
