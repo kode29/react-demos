@@ -14,7 +14,7 @@ export default function Card(props){
                 <img src={`/assets/img/cards/${props.coverImg}`} alt={props.name} className="card--item_img"/>
                 <div className="card--item_content">
                     <div className="card--item_content_rating">
-                        <img src="/assets/img/cards/Star 1.png" alt="Star" className="card--item_content_star"/>
+                        <img src="./assets/img/cards/Star 1.png" alt="Star" className="card--item_content_star"/>
                         <span>{props.stats.rating}</span>
                         <span className="gray">({props.stats.reviewCount})</span>
                         &middot;

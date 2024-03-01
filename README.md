@@ -11,32 +11,23 @@ everything else is built using local `npm` server (with `create-react-app NAME`)
 # Publically Available Demos
 
 >## Capstone Projects
-- [Solo Project 1: Static Business Card](https://kode29-react-bizcard.surge.sh/)
-- [Solo Project 2: Travel Blog](https://kode29-react-traveljournal.surge.sh/)
-- [Solo Project 3: Tenzies App](https://tenzies.react.kylemperkins.com/)
+- [Solo Project 1: Static Business Card](https://react.kylemperkins.com/bizcard/)
+- [Solo Project 2: Travel Blog](https://react.kylemperkins.com/traveljournal/)
+- [Solo Project 3: Tenzies App](https://react.kylemperkins.com/tenzies)
 
 >## In-Course Projects
-- [AirBnb Clone](https://kode29-react-airbnb.surge.sh/)
-- [Meme Generator](https://kode29-react-meme.surge.sh/)
-- [Notes App](https://kode29-react-notes.surge.sh/)
+- [AirBnb Clone](https://react.kylemperkins.com/airbnb)
+- [Meme Generator](https://react.kylemperkins.com/memegenerator)
+- [Notes App](https://react.kylemperkins.com/notes)
 
 >## Practice Modules
-- [Fun Facts about React](https://kode29-react-project1.surge.sh/)
-- [addItem React Practice](https://kode29-react-additem.surge.sh/)
-- [favCard React Practice](https://kode29-react-favcard.surge.sh/)
-- [Bubble Add - React Practice](https://kode29-react-bubbleadd.surge.sh/)
-- [Boxes Challenge - React Practice](https://kode29-react-boxes.surge.sh/)
-- [Joke Challenge - React Practice](https://kode29-react-jokes.surge.sh/)
-- [Forms Challenge - React Practice](https://kode29-react-forms.surge.sh/)
-- [Forms Practice - React Practice](https://kode29-react-forms-practice1.surge.sh/)
-- [API Call Practice 1](https://kode29-react-api1.surge.sh)
-- [Window API useEffect() practice](https://kode29-react-window.surge.sh)
-
-## TODO
-Subdomain: [FOLDER]
-Set up script to automatically query Cloudflare for DNS records of subdomain [FOLDER]
-If no DNS record for subdomain, create one
-Query the Server to see if the subdomain has been created
-If not, create a subdomain configuration file
-Reload apache
-rsync -av . kyle@d.q5i.co:/var/www/vhosts/kylemperkins.com/[FOLDER]/
+- [Fun Facts about React](https://react.kylemperkins.com/project1)
+- [addItem React Practice](https://react.kylemperkins.com/additems)
+- [favCard React Practice](https://react.kylemperkins.com/favcard)
+- [Bubble Add - React Practice](https://react.kylemperkins.com/bubbleadd)
+- [Boxes Challenge - React Practice](https://react.kylemperkins.com/boxes)
+- [Joke Challenge - React Practice](https://react.kylemperkins.com/jokes)
+- [Forms Challenge - React Practice](https://react.kylemperkins.com/forms)
+- [Forms Practice - React Practice](https://react.kylemperkins.com/forms-practice1)
+- [API Call Practice 1](https://react.kylemperkins.com/api1)
+- [Window API useEffect() practice](https://react.kylemperkins.com/window-effect)
