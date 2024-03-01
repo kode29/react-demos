@@ -1,3 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Karla:wght@700&display=swap");
 *{
   box-sizing: border-box;
+}
+body{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0B2434;
+
+}
+main{
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  height: 400px;
+  width: 400px;
+  padding: 35px;
+  margin-top: 20px;
 }
