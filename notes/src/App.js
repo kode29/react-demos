@@ -18,7 +18,11 @@ export default function App() {
     )
     React.useEffect(()=>{
         localStorage.setItem("localStorageNotes", JSON.stringify(notes))
-    }, notes)
+    }, [notes])
+    // if we pass the object only, we're going to get a Warning
+    // when "notes" changes size (ie: delete)
+    // Solution: Wrap in array
+    // Source: https://stackoverflow.com/a/65819712
     
     function createNewNote() {
         const newNote = {
@@ -60,6 +64,13 @@ export default function App() {
         //         : oldNote
         // }))
     }
+
+    function deleteNote(event, noteId){
+        event.stopPropagation()
+        console.log("Deleted note", noteId)
+        // filter method will run through and return ONLY the items that match
+        setNotes(oldNotes => oldNotes.filter(note => note.id !== noteId))
+    }
     
     function findCurrentNote() {
         return notes.find(note => {
@@ -82,6 +93,7 @@ export default function App() {
                     currentNote={findCurrentNote()}
                     setCurrentNoteId={setCurrentNoteId}
                     newNote={createNewNote}
+                    deleteNote={deleteNote}
                 />
                 {
                     currentNoteId && 
