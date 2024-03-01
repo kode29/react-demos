@@ -13,6 +13,7 @@ everything else is built using local `npm` server (with `create-react-app NAME`)
 >## Capstone Projects
 - [Solo Project 1: Static Business Card](https://kode29-react-bizcard.surge.sh/)
 - [Solo Project 2: Travel Blog](https://kode29-react-traveljournal.surge.sh/)
+- [Solo Project 3: Tenzies App](https://tenzies.react.kylemperkins.com/)
 
 >## In-Course Projects
 - [AirBnb Clone](https://kode29-react-airbnb.surge.sh/)
