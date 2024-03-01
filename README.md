@@ -20,7 +20,7 @@ everything else is built using local `npm` server (with `create-react-app NAME`)
 - [Notes App](https://kode29-react-notes.surge.sh/)
 
 >## Practice Modules
-- [Fun Facts about React](https://kode29-react-project1.netlifty.app/)
+- [Fun Facts about React](https://kode29-react-project1.surge.sh/)
 - [addItem React Practice](https://kode29-react-additem.surge.sh/)
 - [favCard React Practice](https://kode29-react-favcard.surge.sh/)
 - [Bubble Add - React Practice](https://kode29-react-bubbleadd.surge.sh/)
@@ -30,3 +30,12 @@ everything else is built using local `npm` server (with `create-react-app NAME`)
 - [Forms Practice - React Practice](https://kode29-react-forms-practice1.surge.sh/)
 - [API Call Practice 1](https://kode29-react-api1.surge.sh)
 - [Window API useEffect() practice](https://kode29-react-window.surge.sh)
+
+## TODO
+Subdomain: [FOLDER]
+Set up script to automatically query Cloudflare for DNS records of subdomain [FOLDER]
+If no DNS record for subdomain, create one
+Query the Server to see if the subdomain has been created
+If not, create a subdomain configuration file
+Reload apache
+rsync -av . kyle@d.q5i.co:/var/www/vhosts/kylemperkins.com/[FOLDER]/
