@@ -1,0 +1,18 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #1C1C1C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  display: inline-block;
+  height: 550px;
+  width: 500px;
+  background-color: white;
+  margin-top: 30px;
+}

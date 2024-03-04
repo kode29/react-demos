@@ -1,7 +1,12 @@
 import React from "react"
+import "./App.css"
+
+import Quiz from "./components/Quiz"
 
 export default function App(){
   return (
-    <div>Hello</div>
+    <div className="container">
+      <Quiz />
+    </div>
   )
 }
