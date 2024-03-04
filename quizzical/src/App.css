@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 *{
   box-sizing: border-box;
 }
@@ -8,11 +9,28 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Karla", sans-serif;
 }
 .container{
   display: inline-block;
   height: 550px;
   width: 500px;
-  background-color: white;
+  background-color: #F5F7FB;
   margin-top: 30px;
+  position: relative;
+  overflow: none;
+}
+.yellowBlob{
+  background-color: #fffad1;
+  border-radius: 19% 81% 71% 29% / 53% 45% 55% 47%;
+  width: 230px;
+  height: 300px;
+  position: relative;
+  transform: rotate(-40deg);
+  right: 0;
+  top: 0;
+  z-index: -1000;
+}
+.blueBlob{
+  background-color: #DEEBF8;
 }
