@@ -15,13 +15,11 @@ everything else is built using local `npm` server (with `create-react-app NAME`)
 - [Solo Project 2: Travel Blog](https://react.kylemperkins.com/traveljournal/)
 - [Solo Project 3: Quizzical App](https://react.kylemperkins.com/quizzical)
 
-
 >## In-Course Projects
 - [AirBnb Clone](https://react.kylemperkins.com/airbnb)
 - [Meme Generator](https://react.kylemperkins.com/memegenerator)
 - [Notes App](https://react.kylemperkins.com/notes)
 - [Tenzies App](https://react.kylemperkins.com/tenzies)
-
 
 >## Practice Modules
 - [Fun Facts about React](https://react.kylemperkins.com/project1)
