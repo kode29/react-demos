@@ -2,6 +2,7 @@ import React from 'react'
 import Header from "./components/Header"
 import DieBox from "./components/DieBox"
 import Roll from "./components/Roll"
+import Confetti from "react-confetti"
 
 import { customAlphabet } from 'nanoid/non-secure'; 
 
@@ -12,7 +13,7 @@ const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz0123456789', 10);
 
 export default function App() {
 
-  const [dice, setdice] = React.useState(allNewDice())
+  const [dice, setDice] = React.useState(allNewDice())
   const [tenzies, setTenzies] = React.useState(false)
 
   // Winning condition
@@ -31,14 +32,8 @@ export default function App() {
   function allNewDice(){
     const newDice = [];
     for (let i=0; i<10; i++){
-      // let nextDice = { 
-      //   value: Math.ceil(Math.random() * 6), 
-      //   isHeld: false ,
-      //   id: nanoid()
-      // }
       newDice.push( generateNewDie() )
     }
-    // console.log(newDice)
     return newDice;
   }
 
@@ -51,29 +46,28 @@ export default function App() {
   }
 
   function rollDice(){
-    // setdice(allNewDice())
-    // console.log("Roll New Dice")
-    setdice(oldValue => {
-      return oldValue.map((die)=>{
-        return die.isHeld ?
-          die : 
-          generateNewDie()
+    if (tenzies){
+      setDice(allNewDice())
+      setTenzies(false)
+    }
+    else {
+      setDice(oldValue => {
+        return oldValue.map((die)=>{
+          return die.isHeld ?
+            die : 
+            generateNewDie()
+        })
       })
-    })
+    }
   }
 
   function toggleHold(id){
-    // console.log(id, " Clicked")
-    setdice(oldValue => {
+    setDice(oldValue => {
       return oldValue.map((die)=>{
         return die.id === id ? {...die, isHeld: !die.isHeld} : die
       })
     })
   }
-
-  // React.useEffect(() => {
-  //   setdice(allNewDice())
-  // }, dice)
 
   const diceElements = dice.map((dice) => (
     <DieBox 
@@ -87,11 +81,12 @@ export default function App() {
 
   return (
     <main>
+      {tenzies && <Confetti />}
       <Header />
       <div className="diceContainer">
           { diceElements }
       </div>
-      <Roll text="Roll" handleClick={rollDice}/>
+      <Roll text={tenzies ? "New Game" : "Roll"} handleClick={rollDice}/>
     </main>
   );
 }
