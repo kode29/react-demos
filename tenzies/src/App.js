@@ -17,21 +17,35 @@ export default function App() {
   function allNewDice(){
     const newDice = [];
     for (let i=0; i<10; i++){
-      let nextDice = { 
+      // let nextDice = { 
+      //   value: Math.ceil(Math.random() * 6), 
+      //   isHeld: false ,
+      //   id: nanoid()
+      // }
+      newDice.push( generateNewDie() )
+    }
+    console.log(newDice)
+    return newDice;
+  }
+
+  function generateNewDie(){
+    return { 
         value: Math.ceil(Math.random() * 6), 
         isHeld: false ,
         id: nanoid()
       }
-      newDice.push( nextDice )
-    }
-    // console.log(newDice)
-    return newDice;
   }
 
   function rollDice(){
-    // TODO: Tasks pending completion -@kyle at 3/1/2024, 3:35:20 AM
-    // only roll on isHeld:false
-    setDieFace(allNewDice())
+    // setDieFace(allNewDice())
+    console.log("Roll New Dice")
+    setDieFace(oldValue => {
+      return oldValue.map((die)=>{
+        return die.isHeld ?
+          die : 
+          generateNewDie()
+      })
+    })
   }
 
   function toggleHold(id){
