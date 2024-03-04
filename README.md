@@ -13,12 +13,15 @@ everything else is built using local `npm` server (with `create-react-app NAME`)
 >## Capstone Projects
 - [Solo Project 1: Static Business Card](https://react.kylemperkins.com/bizcard/)
 - [Solo Project 2: Travel Blog](https://react.kylemperkins.com/traveljournal/)
-- [Solo Project 3: Tenzies App](https://react.kylemperkins.com/tenzies)
+- [Solo Project 3: Quizzical App](https://react.kylemperkins.com/quizzical)
+
 
 >## In-Course Projects
 - [AirBnb Clone](https://react.kylemperkins.com/airbnb)
 - [Meme Generator](https://react.kylemperkins.com/memegenerator)
 - [Notes App](https://react.kylemperkins.com/notes)
+- [Tenzies App](https://react.kylemperkins.com/tenzies)
+
 
 >## Practice Modules
 - [Fun Facts about React](https://react.kylemperkins.com/project1)
