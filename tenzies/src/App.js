@@ -12,7 +12,21 @@ const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz0123456789', 10);
 
 export default function App() {
 
-  const [dieFace, setDieFace] = React.useState(allNewDice())
+  const [dice, setdice] = React.useState(allNewDice())
+  const [tenzies, setTenzies] = React.useState(false)
+
+  // Winning condition
+  React.useEffect(()=> {
+    // console.log("Dice State Changed")
+    const allHeld = dice.every(die => die.isHeld)
+    const firstValue = dice[0].value
+    const allSameValue = dice.every(die => die.value === firstValue)
+
+    if (allHeld && allSameValue){
+      setTenzies(true)
+      console.log("You Won!")
+    }
+  }, [dice])
 
   function allNewDice(){
     const newDice = [];
@@ -24,7 +38,7 @@ export default function App() {
       // }
       newDice.push( generateNewDie() )
     }
-    console.log(newDice)
+    // console.log(newDice)
     return newDice;
   }
 
@@ -37,9 +51,9 @@ export default function App() {
   }
 
   function rollDice(){
-    // setDieFace(allNewDice())
-    console.log("Roll New Dice")
-    setDieFace(oldValue => {
+    // setdice(allNewDice())
+    // console.log("Roll New Dice")
+    setdice(oldValue => {
       return oldValue.map((die)=>{
         return die.isHeld ?
           die : 
@@ -49,8 +63,8 @@ export default function App() {
   }
 
   function toggleHold(id){
-    console.log(id, " Clicked")
-    setDieFace(oldValue => {
+    // console.log(id, " Clicked")
+    setdice(oldValue => {
       return oldValue.map((die)=>{
         return die.id === id ? {...die, isHeld: !die.isHeld} : die
       })
@@ -58,10 +72,10 @@ export default function App() {
   }
 
   // React.useEffect(() => {
-  //   setDieFace(allNewDice())
-  // }, dieFace)
+  //   setdice(allNewDice())
+  // }, dice)
 
-  const diceElements = dieFace.map((dice) => (
+  const diceElements = dice.map((dice) => (
     <DieBox 
       key={dice.id} 
       value={dice.value} 
