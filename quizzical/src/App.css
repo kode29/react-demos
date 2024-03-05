@@ -18,19 +18,42 @@ body{
   background-color: #F5F7FB;
   margin-top: 30px;
   position: relative;
-  overflow: none;
+  overflow: hidden;
+}
+.blobs{
+  display: contents;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  /* z-index: -100; */
+  
+}
+.blobs > div {
+  transition-timing-function: ease;
 }
 .yellowBlob{
   background-color: #fffad1;
   border-radius: 19% 81% 71% 29% / 53% 45% 55% 47%;
   width: 230px;
   height: 300px;
-  position: relative;
+  position: absolute;
   transform: rotate(-40deg);
-  right: 0;
-  top: 0;
-  z-index: -1000;
+  right: -100px;
+  top: -100px;
 }
 .blueBlob{
   background-color: #DEEBF8;
+  width: 230px;
+  height: 300px;
+  border-radius: 100px;  
+  position: absolute;
+  /* transform: rotate(-40deg); */
+  left: -80px;
+  bottom: -210px;
+  
+}
+.quizBox{
+  z-index: 100;
+  background: transparent;
+  position: relative;
 }
