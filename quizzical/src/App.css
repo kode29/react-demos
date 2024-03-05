@@ -10,6 +10,7 @@ body{
   justify-content: center;
   align-items: center;
   font-family: "Karla", sans-serif;
+  color: #293264;
 }
 .container{
   display: inline-block;
@@ -29,7 +30,11 @@ body{
   
 }
 .blobs > div {
-  transition-timing-function: ease;
+  -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 .yellowBlob{
   background-color: #fffad1;
@@ -50,10 +55,40 @@ body{
   /* transform: rotate(-40deg); */
   left: -80px;
   bottom: -210px;
-  
 }
-.quizBox{
+.container.quizActive .blobs .yellowBlob{
+  right: -150px;
+  top: -150px;
+}
+.container.quizActive .blobs .blueBlob {
+  left: -120px;
+  bottom: -250px;
+}
+.quizBox, .titleBox{
   z-index: 100;
+  height: 100%;
+  width: 100%;
   background: transparent;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  border: 0;
+  border-radius: 15px;
+  padding: 15px;
+  width: 10rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.titleBox h1{
+  margin-bottom: 0;
+}
+.titleBox button{
+  font-size: 1.1rem;
 }

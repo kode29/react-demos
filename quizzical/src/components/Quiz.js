@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Quiz(){
     return (
-        <div className="quizBox">Hello</div>
+        <div className="quizBox">
+            QUIZ!
+        </div>
     )
 }
