@@ -4,18 +4,37 @@ import "./App.css"
 import Title from "./components/Title"
 import Quiz from "./components/Quiz"
 
+import data from "./data"
+
 export default function App(){
 
-  const [quizStart, setQuizStart] = React.useState(false)
-  const [questions, setQuestions] = React.useState([])
+  const [roundCounter, setRoundCounter] = React.useState(0)
+  const [questions, setQuestions] = React.useState({})
   const [userAnswers, setUserAnswers] = React.useState([])
+  const [isCheckedAnswers, setIsCheckedAnswers] = React.useState(false)
   
-
   let containerClass = "container";
-  containerClass += quizStart ? " quizActive" : ""
+  containerClass += roundCounter > 0 ? " quizActive" : ""
+
+  React.useEffect(() => {
+    // fetch(`https://opentdb.com/api.php?amount=5&difficulty=easy`)
+    //     .then(res => res.json())
+    //     .then(data => setQuestions(data.results))
+
+        setQuestions(data[0].results)
+
+        // console.log("Fetched Questions")
+        // console.log(questions)
+        console.log(`Round Counter: ${roundCounter}`)
+  }, [roundCounter])
 
   function startQuiz(){
-    setQuizStart(true)
+    console.log("START QUIZ")
+    setRoundCounter(oldValue => oldValue + 1)
+  }
+
+  function checkAnswers(){
+    console.log("Check answers")
   }
 
   return (
@@ -24,7 +43,15 @@ export default function App(){
         <div className="yellowBlob"></div>
         <div className="blueBlob"></div>
       </div>
-      {quizStart ? <Quiz /> : <Title startQuiz={startQuiz}/>}
+      {roundCounter > 0 ? 
+        <Quiz 
+          chcekedAnswers={isCheckedAnswers} 
+          questions={questions} 
+          checkAnswers={checkAnswers} 
+          restartQuiz={startQuiz} 
+        /> :
+        <Title handleClick={startQuiz}/>
+      }
     </div>
   )
 }

@@ -5,7 +5,7 @@ export default function Title(props){
         <div className="titleBox">
             <h1>Quizzical</h1>
             <p>Try your best at a few sample quiz questions</p>
-            <button onClick={props.startQuiz}>Start Quiz</button>
+            <button onClick={props.handleClick}>Start Quiz</button>
         </div>
     )
 }
