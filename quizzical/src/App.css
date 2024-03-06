@@ -76,6 +76,21 @@ body{
   align-items: center;
 }
 
+.quizBox--grid{
+  width: 80%;
+  margin-bottom: 10px;
+}
+.questionBox{
+  border-bottom: #DBDEF0 1px solid;
+  padding: 10px 0;
+}
+.questionBox--question{
+  font-weight: bold;
+}
+.questionBox--answers .option {
+  border: 1px #000 solid;
+}
+
 button{
   background-color: #4D5B9E;
   color: #F5F7FB;
