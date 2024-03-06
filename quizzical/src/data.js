@@ -26,7 +26,7 @@ export default [
       "type": "boolean",
       "difficulty": "easy",
       "category": "Entertainment: Books",
-      "question": "&quot;Green Eggs and Ham&quot; consists of only 50 different words.",
+      "question": "\"Green Eggs and Ham\" consists of only 50 different words.",
       "correct_answer": "True",
       "incorrect_answers": [
         "False"
@@ -48,7 +48,7 @@ export default [
       "type": "multiple",
       "difficulty": "easy",
       "category": "General Knowledge",
-      "question": "What is the name of NASA&rsquo;s most famous space telescope?",
+      "question": "What is the name of NASA's most famous space telescope?",
       "correct_answer": "Hubble Space Telescope",
       "incorrect_answers": [
         "Big Eye",

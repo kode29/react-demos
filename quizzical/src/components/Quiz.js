@@ -22,9 +22,9 @@ export default function Quiz(props){
                 { questionBox }
             </div>
             {
-                // props.checkedAnswers ? 
-                    <button onClick={props.restartQuiz}>Restart</button> // :
-                    // <button onClick={props.checkAnswers}>Check Answers</button>
+                props.checkedAnswers ? 
+                    <button onClick={props.restartQuiz}>Restart</button>  :
+                    <button onClick={props.checkAnswers}>Check Answers</button>
             }
         </div>
     )

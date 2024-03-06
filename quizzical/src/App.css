@@ -14,10 +14,11 @@ body{
 }
 .container{
   display: inline-block;
-  height: 550px;
+  min-height: 550px;
   width: 500px;
   background-color: #F5F7FB;
   margin-top: 30px;
+  padding: 20px;
   position: relative;
   overflow: hidden;
 }
@@ -66,7 +67,6 @@ body{
 }
 .quizBox, .titleBox{
   z-index: 100;
-  height: 100%;
   width: 100%;
   background: transparent;
   position: relative;
@@ -74,6 +74,12 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.titleBox{
+  height: 500px;
+}
+.quizBox {
+  min-height: 550px;
 }
 
 .quizBox--grid{
@@ -87,8 +93,18 @@ body{
 .questionBox--question{
   font-weight: bold;
 }
+.questionBox--answers{
+  display: flex;
+    justify-content: flex-start;
+    padding: 10px 0;
+    column-gap: 12px;
+}
 .questionBox--answers .option {
-  border: 1px #000 solid;
+  border: 1px #4D5B9E solid;
+    border-radius: 8px;
+    text-align: center;
+    padding: 3px 3px;
+    cursor: pointer;
 }
 
 button{
