@@ -6,6 +6,9 @@ import Quiz from "./components/Quiz"
 
 import data from "./data"
 
+import { customAlphabet } from 'nanoid/non-secure'; 
+const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz0123456789', 10); 
+
 export default function App(){
 
   const [roundCounter, setRoundCounter] = React.useState(0)
@@ -22,6 +25,11 @@ export default function App(){
     //     .then(data => setQuestions(data.results))
 
         setQuestions(data[0].results)
+        setQuestions(oldValue => {
+          return oldValue.map((question)=>{
+            return question.id == null ? {...question, id: nanoid()} : question.id
+          })
+        })
 
         // console.log("Fetched Questions")
         // console.log(questions)
@@ -31,11 +39,23 @@ export default function App(){
   function startQuiz(){
     console.log("START QUIZ")
     setRoundCounter(oldValue => oldValue + 1)
+    console.log(questions)
   }
 
   function checkAnswers(){
     console.log("Check answers")
+    console.log(questions)
+    console.log(userAnswers)
   }
+
+  // function answerClick(questionId, answerValue){
+  //   console.log("Answer is clicked")
+  //   setUserAnswers(oldValue => {
+  //     return oldValue.map((question)=>{
+  //       return question.id == questionId ? {...question, answer: answerValue} : question
+  //     })
+  //   })
+  // }
 
   return (
     <div className={containerClass}>
@@ -45,7 +65,7 @@ export default function App(){
       </div>
       {roundCounter > 0 ? 
         <Quiz 
-          chcekedAnswers={isCheckedAnswers} 
+          checkedAnswers={isCheckedAnswers} 
           questions={questions} 
           checkAnswers={checkAnswers} 
           restartQuiz={startQuiz} 

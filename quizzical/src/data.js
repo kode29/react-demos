@@ -6,54 +6,60 @@ export default [
       "type": "boolean",
       "difficulty": "easy",
       "category": "Entertainment: Video Games",
-      "question": "In Resident Evil 4, the Chicago Typewriter has infinite ammo.",
-      "correct_answer": "True",
+      "question": "How would one say goodbye in Spanish?",
+      "correct_answer": "Adios",
       "incorrect_answers": [
-        "False"
+        "Hola",
+        "Au Revoir",
+        "Salir"
       ]
     },
     {
       "type": "boolean",
       "difficulty": "easy",
       "category": "Science: Computers",
-      "question": "Linus Torvalds created Linux and Git.",
-      "correct_answer": "True",
+      "question": "Which best selling toy of 1983 caused hysteria, resulting in ruots breaking in stores?",
+      "correct_answer": "Care Bears",
       "incorrect_answers": [
-        "False"
+        "Cabbage Patch Kids",
+        "Transformers",
+        "Rubik's Cube"
       ]
     },
     {
       "type": "boolean",
       "difficulty": "easy",
       "category": "Entertainment: Books",
-      "question": "\"Green Eggs and Ham\" consists of only 50 different words.",
-      "correct_answer": "True",
+      "question": "Which is the hottest planet in our Solar System?",
+      "correct_answer": "Venus",
       "incorrect_answers": [
-        "False"
+        "Mercury",
+        "Mars",
+        "Saturn"
       ]
     },
     {
       "type": "multiple",
       "difficulty": "easy",
       "category": "Entertainment: Video Games",
-      "question": "What is the name of a popular franchise that includes placing blocks down and surviving in an open world? ",
-      "correct_answer": "Minecraft",
+      "question": "In which country was the ceasar salad invented?",
+      "correct_answer": "Mexico",
       "incorrect_answers": [
-        "Unturned",
-        "Roblox",
-        "Grand Theft Auto V"
+        "Italy",
+        "Portugal",
+        "France"
       ]
     },
     {
       "type": "multiple",
       "difficulty": "easy",
       "category": "General Knowledge",
-      "question": "What is the name of NASA's most famous space telescope?",
-      "correct_answer": "Hubble Space Telescope",
+      "question": "How many hears does an Octopus have?",
+      "correct_answer": "Three",
       "incorrect_answers": [
-        "Big Eye",
-        "Death Star",
-        "Millenium Falcon"
+        "One",
+        "Two",
+        "Four"
       ]
     }
   ]

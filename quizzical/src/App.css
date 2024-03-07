@@ -15,7 +15,7 @@ body{
 .container{
   display: inline-block;
   min-height: 550px;
-  width: 500px;
+  width: 650px;
   background-color: #F5F7FB;
   margin-top: 30px;
   padding: 20px;
@@ -92,19 +92,26 @@ body{
 }
 .questionBox--question{
   font-weight: bold;
+  font-size: 17px;
 }
 .questionBox--answers{
   display: flex;
     justify-content: flex-start;
     padding: 10px 0;
-    column-gap: 12px;
+    gap: 13px;
+    /* flex-wrap:wrap; */
 }
 .questionBox--answers .option {
   border: 1px #4D5B9E solid;
     border-radius: 8px;
     text-align: center;
-    padding: 3px 3px;
+    padding: 2px 15px;
     cursor: pointer;
+    font-size: 12px;
+}
+.questionBox--answers .selected{
+  background-color: #D6DBF5;
+  border: 1px transparent solid;
 }
 
 button{

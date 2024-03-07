@@ -8,9 +8,12 @@ export default function Quiz(props){
     // console.log(props)
 
     const questionBox = props.questions.map(question => {
+        // const questionKey = nanoid();
+        // const ac = props.answerClick(questionKey)
         return (
             <Question 
-                key={nanoid()}
+                key={question.id} 
+                // answerClick={()=>ac}
                 {...question}
             />
         )                  
