@@ -15,9 +15,10 @@ const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz0123456789', 10);
 //         ]
 //       },
 
-function answerClick(q, a){
-    console.log("Answer Clicked!")
-}
+// function answerQClick(q, a){
+//     console.log("Answer Q Clicked!")
+//     console.log(`Q: ${q} | A: ${a}`)
+// }
 
 export default function Question(props){
     const listOfAnswers = [];
@@ -35,7 +36,7 @@ export default function Question(props){
     const answers = listOfAnswers.map(item => {
         // const ac = props.answerClick(props.question.id, item);
         return (
-          <div className="option" onClick={answerClick(props.id, item)}>{item}</div>
+          <div className="option" onClick={props.handleAnswerClick}>{item}</div>
         )
     })    
 
