@@ -84,7 +84,7 @@ body{
 
 .quizBox--grid{
   width: 80%;
-  margin-bottom: 10px;
+  margin: auto;
 }
 .questionBox{
   border-bottom: #DBDEF0 1px solid;
