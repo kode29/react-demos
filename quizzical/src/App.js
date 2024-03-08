@@ -21,6 +21,9 @@ export default function App() {
     setShowStartScreen(true);
     setShowAnswers(false);
   }
+  function doCheckAnswers() {
+    setShowAnswers(true);
+  }
 
   function selectAnswer(optionId, questionId) {
     if (!showAnswers) {
@@ -35,10 +38,6 @@ export default function App() {
     }
   }
 
-  function doCheckAnswers() {
-    setShowAnswers(true);
-  }
-
   // Get a random set of questions using the OpenTDB API
   // Render/shuffle the answers upon initial load
   // ONLY Run if we have a new "round" (roundCounter++)
@@ -47,7 +46,7 @@ export default function App() {
     fetch(`https://opentdb.com/api.php?amount=10&difficulty=easy`)
           .then(res => res.json())
           .then(data => setQuestions(
-            data[0].results.map((question) => {
+            data.results.map((question) => {
               return ({
                 question: question.question,
                 answers: question.incorrect_answers
