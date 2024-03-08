@@ -24,11 +24,12 @@ export default function App() {
   function startGame() {
     setShowStartScreen(false);
     setRoundCounter((previous) => previous + 1);
-  }
-  function restartGame() {
-    setShowStartScreen(true);
     setShowAnswers(false);
   }
+  // function restartGame() {
+  //   setShowStartScreen(true);
+  //   setShowAnswers(false);
+  // }
   function doCheckAnswers() {
     setShowAnswers(true);
   }
@@ -104,7 +105,7 @@ export default function App() {
           showAnswers={showAnswers}
           checkAnswers={() => doCheckAnswers()}
           questions={questions}
-          restartGame={() => restartGame()}
+          restartGame={() => startGame()}
           score={score}
         />
       )}
