@@ -4,7 +4,15 @@ import "./App.css";
 import Start from "./components/Start";
 import Quiz from "./components/Quiz";
 
-// import data from "./data";
+// import data from "./data"; // backup testing
+// This comes from Figma design at https://www.figma.com/file/pU1xm4st8SUwxMDN6Z1LfJ/Quizzical-App-(Copy)?type=design&node-id=8%3A2&mode=design&t=oBGrm762CTUqRoWp-1
+// It is the Solo Project from the Basic React course
+
+/**
+ * Inspiration came from the following sources:
+ * https://github.com/badkamyk/quiz-app-react/
+ * https://github.com/d-herz/react-quiz-game/
+ */
 
 export default function App() {
   const [roundCounter, setRoundCounter] = React.useState(0);
@@ -43,22 +51,23 @@ export default function App() {
   // ONLY Run if we have a new "round" (roundCounter++)
   React.useEffect(() => {
     // console.log("Effect ran");
-    fetch(`https://opentdb.com/api.php?amount=10&difficulty=easy`)
-          .then(res => res.json())
-          .then(data => setQuestions(
-            data.results.map((question) => {
-              return ({
-                question: question.question,
-                answers: question.incorrect_answers
-                  .concat([question.correct_answer])
-                  .sort(() => Math.random() - 0.5),
-                correctAnswer: question.correct_answer,
-                selectedAnswer: undefined,
-              });
-            })
-          )
+    fetch(`https://opentdb.com/api.php?amount=5&difficulty=easy&encode=url3986`)
+      .then((res) => res.json())
+      .then((data) =>
+        setQuestions(
+          data.results.map((question) => {
+            return {
+              question: question.question,
+              answers: question.incorrect_answers
+                .concat([question.correct_answer])
+                .sort(() => Math.random() - 0.5),
+              correctAnswer: question.correct_answer,
+              selectedAnswer: undefined,
+            };
+          })
         )
-    
+      );
+
     // console.log(questions);
     setScore(0);
 

@@ -24,7 +24,9 @@ export default function Quiz(props) {
     <div className="quizBox--grid">
       {listOfQuestions}
       {!props.showAnswers ? (
-        <button onClick={props.checkAnswers}>Check Answers</button>
+        <div className="playAgain--container">
+          <button onClick={props.checkAnswers}>Check Answers</button>
+        </div>
       ) : (
         <div className="playAgain--container">
           <div className="score">

@@ -10,7 +10,6 @@ export default function QuestionBox(props) {
     // console.log(`SHOW ANSWERS: ${props.showAnswers}`)
     if (props.showAnswers) {
       if (props.correctAnswer === option) {
-        console.log("CORRECT")
         return { backgroundColor: "#94D7A2" };
       } else if (props.selectedAnswer === optionId) {
         return { backgroundColor: "#F8BCBC" };
@@ -32,14 +31,16 @@ export default function QuestionBox(props) {
         style={setBtnColor(option, optionId)}
         key={optionId}
       >
-        {option}
+        {decodeURIComponent(option)}
       </div>
     );
   });
 
   return (
     <div className="questionBox">
-      <div className="questionBox--question">{props.question}</div>
+      <div className="questionBox--question">
+        {decodeURIComponent(props.question)}
+      </div>
       <div className="questionBox--answers">{answerOptions}</div>
     </div>
   );

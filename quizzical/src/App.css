@@ -130,3 +130,12 @@ button{
 .titleBox button{
   font-size: 1.1rem;
 }
+.playAgain--container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+.playAgain--container .score{
+  font-weight: bold;
+}
